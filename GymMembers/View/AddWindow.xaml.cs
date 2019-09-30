@@ -11,17 +11,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GymMembers.ViewModel;
 
 namespace GymMembers.View
 {
     /// <summary>
     /// Interaction logic for AddWindow.xaml
     /// </summary>
-    public partial class AddWindow : Window
+    public partial class AddWindow : Window, IClosable
     {
         public AddWindow()
         {
             InitializeComponent();
+            FNameTB.Text = String.Empty;
+            LNameTB.Text = String.Empty;
+            EmailTB.Text = String.Empty;
         }
     }
 }
